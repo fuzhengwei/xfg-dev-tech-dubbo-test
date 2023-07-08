@@ -19,8 +19,9 @@ import javax.annotation.Resource;
 @SpringBootTest
 public class ApiTest {
 
-    // 直连模式；@DubboReference(interfaceClass = IUserService.class, url = "dubbo://127.0.0.1:20881", version = "1.0.0")
-    @DubboReference(interfaceClass = IUserService.class, version = "1.0.0")
+    // 直连模式；
+     @DubboReference(interfaceClass = IUserService.class, url = "dubbo://127.0.0.1:20881", version = "1.0.0")
+//    @DubboReference(interfaceClass = IUserService.class, version = "1.0.0")
     private IUserService userService;
 
     @Resource(name = "rpcProxyBeanFactory")

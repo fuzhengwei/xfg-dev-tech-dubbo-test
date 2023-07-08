@@ -38,7 +38,6 @@ public class RPCProxyBeanFactory implements FactoryBean<IUserService>, Runnable 
 
     @Override
     public IUserService getObject() throws Exception {
-
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         Class<?>[] classes = {IUserService.class};
         InvocationHandler handler = new InvocationHandler() {
