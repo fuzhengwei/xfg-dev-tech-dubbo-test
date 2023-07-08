@@ -1,21 +1,14 @@
 package cn.bugstack.dev.tech.dubbo.consumer.config;
 
 import cn.bugstack.dev.tech.dubbo.api.IUserService;
-import cn.bugstack.dev.tech.dubbo.api.dto.UserResDTO;
-import cn.bugstack.dev.tech.dubbo.api.types.Constants;
-import cn.bugstack.dev.tech.dubbo.api.types.Response;
-import com.alibaba.fastjson2.JSON;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.handler.codec.LineBasedFrameDecoder;
 import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
-import io.netty.handler.codec.string.StringDecoder;
-import io.netty.handler.codec.string.StringEncoder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.FactoryBean;
 import org.springframework.stereotype.Component;
@@ -23,10 +16,8 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.*;
 
 @Slf4j
 @Component("rpcProxyBeanFactory")
