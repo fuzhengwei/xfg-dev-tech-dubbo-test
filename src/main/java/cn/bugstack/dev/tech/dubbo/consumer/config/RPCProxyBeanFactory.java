@@ -31,8 +31,8 @@ public class RPCProxyBeanFactory implements FactoryBean<IUserService>, Runnable 
     public RPCProxyBeanFactory() throws InterruptedException {
         new Thread(this).start();
         while (null == channel) {
-            Thread.sleep(150);
-            log.info("Rpc Socket 链接等待...");
+            Thread.sleep(550);
+            log.info("Rpc Socket 链接等待，需要启动 xfg-dev-tech-dubbo 默认提供 127.0.0.1:22881 链接地址...");
         }
     }
 
